@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "displayName": "Require ProjectName tag",
+    "description": "Enforces that all resources must have a ProjectName tag.",
+    "policyRule": {
+      "if": {
+        "field": "tags.ProjectName",
+        "exists": "false"
+      },
+      "then": {
+        "effect": "deny"
+      }
+    },
+    "metadata": {
+      "category": "Tags"
+    }
+  }
+}
