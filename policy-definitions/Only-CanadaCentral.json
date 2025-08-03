@@ -1,0 +1,18 @@
+{
+  "properties": {
+    "displayName": "Only Canada Central",
+    "description": "Denies any resource that is not being deployed in the Canada Central region.",
+    "policyRule": {
+      "if": {
+        "field": "location",
+        "notEquals": "canadacentral"
+      },
+      "then": {
+        "effect": "deny"
+      }
+    },
+    "metadata": {
+      "category": "General"
+    }
+  }
+}
